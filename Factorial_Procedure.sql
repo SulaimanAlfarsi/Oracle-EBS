@@ -1,0 +1,57 @@
+CREATE OR REPLACE PROCEDURE SULAIMAN_PR_FACTORIAL_2(
+    ERRBUF OUT VARCHAR2,
+    RETCODE OUT NUMBER,
+    N NUMBER
+) IS
+    SULAIMAN_NUM  NUMBER := N;
+    SULAIMAN_RES  NUMBER := N;
+
+    SULAIMAN_FACT_1 EXCEPTION;
+    SULAIMAN_FACT_0 EXCEPTION;
+
+BEGIN
+    IF SULAIMAN_NUM = 0 OR SULAIMAN_NUM = 1 THEN
+        RAISE SULAIMAN_FACT_1;
+
+    ELSIF SULAIMAN_NUM < 0 THEN
+        RAISE SULAIMAN_FACT_0;
+    END IF;
+
+    LOOP
+        SULAIMAN_NUM := SULAIMAN_NUM - 1;
+        SULAIMAN_RES := SULAIMAN_RES * SULAIMAN_NUM;
+
+        EXIT WHEN SULAIMAN_NUM = 1;
+    END LOOP;
+
+    FND_FILE.PUT_LINE(
+        FND_FILE.OUTPUT,
+        'FACTORIAL = ' || SULAIMAN_RES
+    );
+
+EXCEPTION
+    WHEN SULAIMAN_FACT_1 THEN
+        FND_FILE.PUT_LINE(
+            FND_FILE.OUTPUT,
+            'FACTORIAL = 1'
+        );
+
+    WHEN SULAIMAN_FACT_0 THEN
+        FND_FILE.PUT_LINE(
+            FND_FILE.OUTPUT,
+            'Input Cannot Be Less Than 0!'
+        );
+
+    WHEN NO_DATA_FOUND THEN
+        FND_FILE.PUT_LINE(
+            FND_FILE.OUTPUT,
+            'Input a Number to Compute Factorial!'
+        );
+
+    WHEN OTHERS THEN
+        FND_FILE.PUT_LINE(
+            FND_FILE.OUTPUT,
+            'Check Your Program!'
+        );
+END;
+/
