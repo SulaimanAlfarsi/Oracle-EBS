@@ -1,56 +1,71 @@
-Steps
-Login to EBS.
+# Steps
 
-Create an Executable:
-Application Developer → Concurrent → Executable
+1. **Login to EBS.**
 
-Executable: SULAIMAN_PR_FAC
-Short Name: SULAIMAN_PR_FAC
-Application: AOL
-Execution Method: PL/SQL Stored Procedure
-Execution File Name: SULAIMAN_PR_FAC
+2. Create an **Executable**:
+   **Application Developer → Concurrent → Executable**
 
-Click Save.
+   ```text
+   Executable: SULAIMAN_PR_FAC
+   Short Name: SULAIMAN_PR_FAC
+   Application: AOL
+   Execution Method: PL/SQL Stored Procedure
+   Execution File Name: SULAIMAN_PR_FAC
+   ```
 
-Create a Concurrent Program:
-Application Developer → Concurrent → Program
+   Click **Save**.
 
-Program: SULAIMAN_PR_FAC_PG
-Short Name: SULAIMAN_PR_FAC_PG
-Application: AOL
-Executable Name: SULAIMAN_PR_FAC
-Format: HTML
-Style: A4
+3. Create a **Concurrent Program**:
+   **Application Developer → Concurrent → Program**
 
-Click Save.
+   ```text
+   Program: SULAIMAN_PR_FAC_PG
+   Short Name: SULAIMAN_PR_FAC_PG
+   Application: AOL
+   Executable Name: SULAIMAN_PR_FAC
+   Format: HTML
+   Style: A4
+   ```
 
-Click Parameters and enter:
+   Click **Save**.
 
-Seq: 1
-Parameter: N
-Value Set: NUMBER_15
+4. Click **Parameters** and enter:
 
-Click Save.
+   ```text
+   Seq: 1
+   Parameter: N
+   Value Set: NUMBER_15
+   ```
 
-Add the program to the existing Request Group.
+   Click **Save**.
 
-Go to:
-System Administrator → Security → Responsibility → Request
+5. Add the program to the existing **Request Group**.
 
-Search for:
+   Go to:
+   **System Administrator → Security → Responsibility → Request**
 
-Group: SULAIMAN_PR_FAC_PG
+   Search for:
 
-Add:
+   ```text
+   Group: SULAIMAN_PR_FAC_PG
+   ```
 
-Program: SULAIMAN_PR_FAC_PG
+   Add:
 
-Click Save.
+   ```text
+   Program: SULAIMAN_PR_FAC_PG
+   ```
 
-Switch to your Responsibility and create a new Request.
+   Click **Save**.
 
-Select:
+6. Switch to your **Responsibility** and create a new **Request**.
 
-SULAIMAN_PR_FAC_PG
-Enter a value for N.
-Submit the request and view the Output.
+7. Select:
+
+   ```text
+   SULAIMAN_PR_FAC_PG
+   ```
+
+8. Enter a value for **N**.
+
+9. Submit the request and view the **Output**.
