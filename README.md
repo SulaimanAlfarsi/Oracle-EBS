@@ -12,12 +12,15 @@ A collection of step-by-step guides and PL/SQL scripts for common Oracle E-Busin
 | [Changing Field Name in EBS.md](Changing%20Field%20Name%20in%20EBS.md) | Uses Forms Personalization (Help → Diagnostics → Custom Code → Personalize) to change the prompt text of the `LAST_NAME` field on the People form. |
 | [Restricting Personalization Access — Site Level.md](Restricting%20Personalization%20Access%20—%20Site%20Level.md) | Disables the `Utilities:Diagnostics` and `Utilities:SQL Trace` profile options at both Site and User level to prevent end users from accessing form personalization/diagnostics. |
 | [SSH.md](SSH.md) | Minimal instructions for connecting to the EBS server via WinSCP using host, username, and password. |
+| [Create Lookup in Oracle EBS.md](Create%20Lookup%20in%20Oracle%20EBS.md) | Creates an extensible Lookup Type (`SULAIMAN_LOOKUP_DEPT`) under **Application Developer → Application → Lookups → Application Object Library** with sample department lookup codes (FIN, IT, SALES, PROD, MKTG). |
 
 ### Oracle Forms
 | File | Description |
 |---|---|
 | [Create Canvas and Data Block in Oracle Forms.md](Create%20Canvas%20and%20Data%20Block%20in%20Oracle%20Forms.md) | Builds a simple single-block form: creates canvas `CAN_EMP` and data block `EMP`, saves as `SULAIMAN_EMP.fmb`, and compiles to `SULAIMAN_EMP.fmx`. |
 | [Create Master Block DEPT and Detail Block EMP.md](Create%20Master%20Block%20DEPT%20and%20Detail%20Block%20EMP.md) | Builds a master-detail form (`DEPT` → `EMP`) linked on `DEPTNO`, letting Forms auto-generate the master-detail triggers/program units. Saved as `SULAIMAN_MASTER_DETAIL.fmb`/`.fmx`. |
+| [Create Master-Detail Form in Oracle Forms and EBS.md](Create%20Master-Detail%20Form%20in%20Oracle%20Forms%20and%20EBS.md) | End-to-end walkthrough building a master-detail form from the `APSTAND.fmb` template (`SULAIMAN_MD.fmb`) with a `DEPT` master block and tabular `EMP` detail block joined via a manual `FK_DEPTNO` relationship, then registering the Form, Function, and Menu entry in EBS and running it under `SULAIMAN_RESP_FORM`. |
+| [Create LOV in Oracle Forms.md](Create%20LOV%20in%20Oracle%20Forms.md) | Adds a List of Values to `SULAIMAN_EMP.fmb` (saved as `SULAIMAN_EMP_LOV.fmb`) using the LOV Wizard with a record group query on `EMP.DEPTNO`, then registers and runs the form to insert a new record via the LOV. |
 | [Place .fmx File in EBS.md](Place%20.fmx%20File%20in%20EBS.md) | Copies the compiled `SULAIMAN_MASTER_DETAIL.fmx` to the EBS forms directory (`fnd/12.0.0/forms/US`) via WinSCP. |
 | [Register Form in EBS.md](Register%20Form%20in%20EBS.md) | Full registration flow for a custom form: move the `.fmx` file, then create the Form, Function, Menu, and Responsibility objects in EBS and assign the responsibility to a user so the form appears in the application menu. |
 
